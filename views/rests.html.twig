@@ -1,0 +1,17 @@
+{% include 'header.html.twig' %}
+
+
+  {% if rests is not empty %}
+    <h2>Here are all {{ cuisine.getName }} restaurants</h2>
+    {% for rest in rests %}
+      <li><a href="/rest/{{ rest.id }}">{{ rest.name }}</a></li>
+    {% endfor %}
+    {% else %}
+      <h2>There are no {{ cuisine.getName }} listed</h2>
+  {% endif %}
+
+  <form action="/" method="get">
+    <button class="btn bg-primary">Home</button>
+  </form>
+
+{% include 'footer.html.twig' %}

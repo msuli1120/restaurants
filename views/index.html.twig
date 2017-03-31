@@ -1,0 +1,14 @@
+{% include 'header.html.twig' %}
+  <form action="/cuisine" method="post">
+    <label for="cuisine">Enter Cuisine</label>
+    <input id="cuisine" name="cuisine" type="text">
+    <button type="submit" class="btn bg-primary">Create</button>
+  </form>
+
+  {% if results is not empty %}
+    {% for result in results %}
+      <li><a href="/cuisine/{{ result.id }}">{{ result.name }}</a></li>
+    {% endfor %}
+  {% endif %}
+
+{% include 'footer.html.twig' %}

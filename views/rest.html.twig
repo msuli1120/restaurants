@@ -1,0 +1,7 @@
+{% include 'header.html.twig' %}
+
+  <h2>{{ rest.getName }}</h2>
+  <p>Location: {{ rest.getLocation }}</p>
+  <a href="/rest/{{ rest.getId }}/edit">Edit</a>
+
+{% include 'footer.html.twig' %}
